@@ -1,3 +1,10 @@
+{{ 
+    config(
+        materialized = 'incremental',
+        partition_by = {'field': 'customer_id x date', 'data_type': 'string'},
+        cluster_by = {'event_timestamp' data time}
+    ) 
+}}
 
 -- Business context:
 ---     * Planet provides a service where customers select an area and download an image of
